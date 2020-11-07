@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "d9c0f57d-76e9-46e8-9aa7-2d34a960d990",
+		"name": "Rektify-Bot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Default",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "rektify-bot.azurewebsites.net/",
+					"host": [
+						"rektify-bot",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ask a Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"question\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "rektify-bot.azurewebsites.net/answer/ask",
+					"host": [
+						"rektify-bot",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"answer",
+						"ask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search a Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "rektify-bot.azurewebsites.net/answer/search",
+					"host": [
+						"rektify-bot",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"answer",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a QnA Pair",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"this que was also added by postman\",\r\n    \"answer\": \"this answer was also added by postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "rektify-bot.azurewebsites.net/kb/new",
+					"host": [
+						"rektify-bot",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"kb",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a QnA Pair",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"this question was also updated by postman\",\r\n    \"qid\": 98\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "rektify-bot.azurewebsites.net/kb/update",
+					"host": [
+						"rektify-bot",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"kb",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
